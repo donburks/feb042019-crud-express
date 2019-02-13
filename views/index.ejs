@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>COOKIES!</title>
+    <link rel='stylesheet' href='/stylesheets/style.css' />
+  </head>
+  <body>
+    <h1>Cookies!</h1>
+    <a href="/cookies/new" title="Add a Cookie">Add Cookie</a>
+    <table>
+      <thead>
+        <tr>
+          <th>Name</th>
+          <th>Image?</th>
+          <th>&nbsp;</th>
+        </tr>
+      </thead>
+      <tbody>
+    <% cookies.forEach(cookie => { %>
+      <tr>
+        <td width="50%"><%= cookie.name %></td>
+        <td width="25%" class="centered"><%- (cookie.image) ? "&check;" : "&cross;" %></td>
+        <td><a href=<%= "/cookies/"+cookie.id %> title="View Cookie">View</a> | <a href=<%= "/cookies/"+cookie.id+"/edit" %> title="Edit Cookie">Edit</a> | <a href=<%= "/cookies/"+cookie.id+"/delete" %> title="Delete Cookie">Delete</a></td>
+      </tr>
+    <% }) %> 
+      </tbody>
+    </table>
+  </body>
+</html>

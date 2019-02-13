@@ -1,0 +1,17 @@
+<!doctype html>
+<html>
+  <head>
+    <title>Edit Cookie</title>
+    <link href="/stylesheets/style.css" rel="stylesheet" />
+  </head>
+  <body>
+    <h1>New Cookie</h1>
+    <form method="POST" action=<%= "/cookies/"+cookie.id %>>
+      <label for="name">Name: </label>
+      <input type="text" id="name" name="name" placeholder="Enter a name..." value="<%= cookie.name %>" /><br />
+      <label for="image">Image: </label>
+      <input type="url" id="image" name="image" placeholder="Enter image URL..." value="<%= cookie.image %>" /><br />
+      <button type="submit">Edit Cookie</button>
+    </form>
+  </body>
+</html>

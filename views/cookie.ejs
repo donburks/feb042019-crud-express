@@ -1,0 +1,16 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>COOKIES!</title>
+    <link rel='stylesheet' href='/stylesheets/style.css' />
+  </head>
+  <body>
+    <h1><%= cookie.name %></h1>
+
+    <img src="<%= cookie.image %>" alt="<%= cookie.name %>" />
+
+    <div>
+      <a href="/cookies" title="Cookie Home">Home</a> | <a href=<%= "/cookies/"+cookie.id + "/edit" %> title="Edit Cookie">Edit</a> | <a href=<%= "/cookies/"+cookie.id+"/delete" %> title="Delete Cookie">Delete</a>
+    </div>
+  </body>
+</html>
